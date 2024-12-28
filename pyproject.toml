@@ -7,6 +7,9 @@ readme = "README.md"
 
 [tool.poetry.scripts]
 cli = "cli.main:main"
+# note that Poetry installs will recognize this as the entry point for the package
+# but setuptools and others do not.  The current solution is to offer a setup.py for 
+# installs that don't use Poetry
 
 [tool.poetry.dependencies]
 python = "^3.8"
