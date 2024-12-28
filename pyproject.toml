@@ -1,15 +1,19 @@
 [tool.poetry]
-name = "cli"
+name = "pycli"
 version = "0.1.0"
 description = "Basic CLI project template that supports modules and command arguments"
 authors = ["Matt Chmielewski <43832628+emskiphoto@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.scripts]
-cli = "cli.main:main"
+pycli = "pycli.main:main"
 # note that Poetry installs will recognize this as the entry point for the package
 # but setuptools and others do not.  The current solution is to offer a setup.py for 
 # installs that don't use Poetry
+
+# second - 'cli' is already used as a Windows powershell command.  Needed to rename
+# 'cli' to 'pycli' to be able to use 'pycli' as an executable command at a powershell
+# prompt
 
 [tool.poetry.dependencies]
 python = "^3.8"
